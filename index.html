@@ -1,0 +1,2390 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Bambai Antillia - Premium Restobar | Ulhasnagar</title>
+    <meta name="description" content="Experience authentic flavors at Bambai Antillia - Premium Restobar in Ulhasnagar. Rated 4.4 stars with 250+ reviews.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --primary-green: #4a9b8e;
+            --primary-green-dark: #2c7a6b;
+            --primary-green-light: #6bb8ab;
+            --accent-gold: #f39c12;
+            --accent-gold-dark: #e67e22;
+            --text-dark: #2c3e50;
+            --text-medium: #34495e;
+            --text-light: #7f8c8d;
+            --text-lighter: #95a5a6;
+            --background-cream: #f8f6f3;
+            --background-white: #ffffff;
+            --border-light: #e8f4f2;
+            --shadow-light: rgba(74, 155, 142, 0.1);
+            --shadow-medium: rgba(74, 155, 142, 0.15);
+            --shadow-dark: rgba(74, 155, 142, 0.25);
+            --gradient-primary: linear-gradient(135deg, var(--primary-green), var(--primary-green-dark));
+            --gradient-accent: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+            --gradient-bg: linear-gradient(135deg, rgba(74, 155, 142, 0.05), rgba(248, 246, 243, 0.95));
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--background-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Responsive Typography */
+        html {
+            font-size: 14px;
+        }
+
+        @media (min-width: 375px) {
+            html { font-size: 15px; }
+        }
+
+        @media (min-width: 414px) {
+            html { font-size: 16px; }
+        }
+
+        @media (min-width: 768px) {
+            html { font-size: 17px; }
+        }
+
+        @media (min-width: 1024px) {
+            html { font-size: 18px; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header - Android Optimized */
+        header {
+            background: rgba(248, 246, 243, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 30px var(--shadow-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            min-height: 4rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 2.25rem;
+            height: 2.25rem;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 800;
+            box-shadow: 0 4px 15px var(--shadow-medium);
+        }
+
+        .mobile-menu-btn {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .mobile-menu-btn:active {
+            background: var(--border-light);
+            transform: scale(0.95);
+        }
+
+        nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--background-white);
+            box-shadow: 0 10px 40px var(--shadow-medium);
+            border-radius: 0 0 1rem 1rem;
+            animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav.active {
+            display: block;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 1.25rem;
+        }
+
+        nav ul li {
+            margin-bottom: 1rem;
+        }
+
+        nav ul li:last-child {
+            margin-bottom: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 1rem;
+            display: block;
+            padding: 0.875rem 1rem;
+            border-radius: 0.75rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav ul li a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: -1;
+        }
+
+        nav ul li a:hover::before,
+        nav ul li a.active::before {
+            left: 0;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: white;
+            transform: translateX(4px);
+        }
+
+        .phone-btn {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 1.25rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px var(--shadow-medium);
+        }
+
+        .phone-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px var(--shadow-dark);
+        }
+
+        .phone-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Hero Section - Android Optimized */
+        .hero {
+            background: var(--gradient-bg);
+            padding: 2.5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(74, 155, 142, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.75rem, 5vw, 3rem);
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 3vw, 1.125rem);
+            color: var(--text-medium);
+            margin-bottom: 2rem;
+            font-weight: 400;
+            position: relative;
+        }
+
+        .rating-card {
+            background: var(--background-white);
+            padding: 1.25rem;
+            border-radius: 1rem;
+            box-shadow: 0 8px 30px var(--shadow-light);
+            margin: 0 auto 2rem;
+            max-width: 18rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border: 1px solid var(--border-light);
+            position: relative;
+        }
+
+        .rating-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            line-height: 1;
+        }
+
+        .rating-info {
+            text-align: left;
+        }
+
+        .stars {
+            color: var(--accent-gold);
+            font-size: 1.125rem;
+            margin-bottom: 0.25rem;
+            letter-spacing: 0.1em;
+        }
+
+        .reviews-text {
+            color: var(--text-light);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        /* Food Gallery - Android Grid */
+        .food-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin: 2rem 0;
+        }
+
+        .food-item {
+            border-radius: 0.875rem;
+            overflow: hidden;
+            box-shadow: 0 6px 25px var(--shadow-light);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            aspect-ratio: 1;
+            position: relative;
+        }
+
+        .food-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent 0%, rgba(74, 155, 142, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .food-item:hover::before {
+            opacity: 1;
+        }
+
+        .food-item:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 12px 40px var(--shadow-medium);
+        }
+
+        .food-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .food-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Info Cards - Android Stack */
+        .info-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .info-card {
+            background: var(--background-white);
+            padding: 1.25rem;
+            border-radius: 0.875rem;
+            box-shadow: 0 6px 25px var(--shadow-light);
+            text-align: center;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .info-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px var(--shadow-medium);
+        }
+
+        .info-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.75rem;
+            font-size: 0.75rem;
+            color: white;
+            font-weight: 700;
+            box-shadow: 0 4px 15px var(--shadow-medium);
+        }
+
+        .info-card h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .info-card p {
+            color: var(--text-light);
+            font-size: 0.875rem;
+            font-weight: 400;
+        }
+
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin: 2rem 0;
+        }
+
+        .cta-btn {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 0.875rem;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: block;
+            cursor: pointer;
+            box-shadow: 0 6px 25px var(--shadow-medium);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-btn:hover::before {
+            left: 100%;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px var(--shadow-dark);
+        }
+
+        .cta-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .cta-btn.secondary {
+            background: var(--background-white);
+            color: var(--primary-green);
+            border: 2px solid var(--primary-green);
+            box-shadow: 0 6px 25px var(--shadow-light);
+        }
+
+        .cta-btn.secondary:hover {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        .cta-btn.order-btn {
+            background: var(--gradient-accent);
+            position: relative;
+        }
+
+        .cta-btn.reserve-btn {
+            background: linear-gradient(135deg, #8e44ad, #9b59b6);
+            box-shadow: 0 6px 25px rgba(142, 68, 173, 0.3);
+        }
+
+        .cta-btn.reserve-btn:hover {
+            box-shadow: 0 12px 40px rgba(142, 68, 173, 0.4);
+        }
+
+        /* Menu Section */
+        .menu-section {
+            padding: 3.75rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        /* Menu Cards Display */
+        .menu-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+
+        .menu-card {
+            background: var(--background-white);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 8px 30px var(--shadow-light);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--border-light);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 50px var(--shadow-medium);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .menu-card:hover img {
+            transform: scale(1.02);
+        }
+
+        /* Restaurant Showcase */
+        .showcase {
+            background: var(--background-white);
+            padding: 3.75rem 0;
+            margin: 2.5rem 0;
+            border-radius: 2rem;
+            box-shadow: 0 8px 30px var(--shadow-light);
+        }
+
+        .showcase-content {
+            text-align: center;
+        }
+
+        .showcase-content h2 {
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .showcase-content p {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .showcase-image {
+            margin: 2rem 0;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 12px 40px var(--shadow-medium);
+        }
+
+        .showcase-image img {
+            width: 100%;
+            height: 15.625rem;
+            object-fit: cover;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .showcase-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--background-white);
+            padding: 3.75rem 0;
+            border-radius: 2rem;
+            box-shadow: 0 8px 30px var(--shadow-light);
+        }
+
+        .contact-info {
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.25rem;
+            padding: 1rem;
+            background: var(--background-cream);
+            border-radius: 0.875rem;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .contact-item:hover {
+            transform: translateX(4px);
+            box-shadow: 0 6px 25px var(--shadow-light);
+        }
+
+        .contact-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 0.75rem;
+            color: white;
+            font-weight: 700;
+            box-shadow: 0 4px 15px var(--shadow-medium);
+        }
+
+        .contact-item strong {
+            display: block;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .contact-item a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Timings */
+        .timings {
+            margin: 2rem 0;
+        }
+
+        .timings h4 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+
+        .timing-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 1rem;
+            background: var(--background-cream);
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .timing-item:hover {
+            background: var(--border-light);
+        }
+
+        /* Map */
+        .map-container {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 12px 40px var(--shadow-medium);
+            height: 18.75rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-light);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 2.5rem 0 1.25rem;
+            border-radius: 2rem 2rem 0 0;
+            margin-top: 2.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--primary-green-light);
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 400;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--primary-green-light);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.25rem;
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
+            font-size: 0.875rem;
+        }
+
+        /* POPUP STYLES - Enhanced */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem;
+            opacity: 0;
+            transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .popup-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .popup {
+            background: var(--background-white);
+            border-radius: 1.25rem;
+            width: 100%;
+            max-width: 32rem;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: popupSlide 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes popupSlide {
+            from {
+                transform: translateY(50px) scale(0.95);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .popup-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 1.25rem 1.25rem 0 0;
+            position: relative;
+        }
+
+        .popup-header h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .popup-header p {
+            opacity: 0.9;
+            font-size: 0.875rem;
+            font-weight: 400;
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 1rem;
+            right: 1.25rem;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .close-popup:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .popup-content {
+            padding: 2rem;
+        }
+
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+            animation: fadeInUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.875rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid var(--border-light);
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: var(--background-white);
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px var(--shadow-light);
+            transform: translateY(-1px);
+        }
+
+        .toggle-group {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .toggle-btn {
+            flex: 1;
+            padding: 0.875rem;
+            border: 2px solid var(--border-light);
+            background: var(--background-white);
+            border-radius: 0.75rem;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .toggle-btn.active {
+            background: var(--primary-green);
+            color: white;
+            border-color: var(--primary-green);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow-medium);
+        }
+
+        .toggle-btn:hover:not(.active) {
+            border-color: var(--primary-green);
+            transform: translateY(-1px);
+        }
+
+        /* Time Slots Grid */
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .time-slot {
+            padding: 0.75rem 0.5rem;
+            border: 2px solid var(--border-light);
+            background: var(--background-white);
+            border-radius: 0.5rem;
+            cursor: pointer;
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .time-slot:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-1px);
+        }
+
+        .time-slot.active {
+            background: var(--primary-green);
+            color: white;
+            border-color: var(--primary-green);
+            box-shadow: 0 4px 15px var(--shadow-medium);
+        }
+
+        .time-slot.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: #f8f9fa;
+        }
+
+        /* Categories and Menu Items */
+        .categories {
+            margin: 1.25rem 0;
+        }
+
+        .category {
+            margin-bottom: 1.5rem;
+        }
+
+        .category-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-green);
+        }
+
+        .menu-items {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .menu-item-card {
+            border: 2px solid var(--border-light);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            background: var(--background-white);
+        }
+
+        .menu-item-card:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow-light);
+        }
+
+        .menu-item-card.selected {
+            border-color: var(--primary-green);
+            background: rgba(74, 155, 142, 0.05);
+            box-shadow: 0 6px 20px var(--shadow-medium);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-name {
+            font-weight: 600;
+            color: var(--text-dark);
+            flex: 1;
+            font-size: 0.875rem;
+        }
+
+        .item-type {
+            background: #27ae60;
+            color: white;
+            padding: 0.125rem 0.5rem;
+            border-radius: 0.5rem;
+            font-size: 0.625rem;
+            font-weight: 700;
+            margin: 0 0.5rem;
+        }
+
+        .item-type.non-veg {
+            background: #e67e22;
+        }
+
+        .item-price {
+            font-weight: 700;
+            color: var(--primary-green);
+            font-size: 1rem;
+        }
+
+        .item-description {
+            color: var(--text-light);
+            font-size: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+        }
+
+        .qty-btn {
+            width: 2rem;
+            height: 2rem;
+            border: 2px solid var(--primary-green);
+            background: var(--background-white);
+            color: var(--primary-green);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .qty-btn:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .qty-display {
+            font-weight: 600;
+            min-width: 1.25rem;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        .order-summary {
+            background: var(--background-cream);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            margin: 1.25rem 0;
+            border: 1px solid var(--border-light);
+        }
+
+        .summary-title {
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 1.125rem;
+            color: var(--primary-green);
+            border-top: 2px solid var(--border-light);
+            padding-top: 0.75rem;
+            margin-top: 0.75rem;
+        }
+
+        .step-buttons {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .step-btn {
+            flex: 1;
+            padding: 0.875rem;
+            border: none;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 0.875rem;
+        }
+
+        .step-btn.prev {
+            background: var(--border-light);
+            color: var(--text-light);
+        }
+
+        .step-btn.prev:hover {
+            background: #ddd;
+            transform: translateY(-1px);
+        }
+
+        .step-btn.next {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 4px 15px var(--shadow-medium);
+        }
+
+        .step-btn.next:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow-dark);
+        }
+
+        .step-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        /* Tablet Styles */
+        @media (min-width: 768px) {
+            .food-gallery {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+
+            .info-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .cta-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .menu-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .showcase-image img {
+                height: 21.875rem;
+            }
+
+            .map-container {
+                height: 25rem;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .popup {
+                max-width: 37.5rem;
+            }
+
+            .menu-items {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .time-slots {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Desktop Styles */
+        @media (min-width: 1024px) {
+            .mobile-menu-btn {
+                display: none;
+            }
+
+            nav {
+                display: block;
+                position: static;
+                background: none;
+                box-shadow: none;
+                animation: none;
+            }
+
+            nav ul {
+                display: flex;
+                padding: 0;
+                gap: 1.5rem;
+            }
+
+            nav ul li {
+                margin-bottom: 0;
+            }
+
+            nav ul li a {
+                padding: 0.5rem 1rem;
+            }
+
+            .food-gallery {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .menu-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .popup {
+                max-width: 43.75rem;
+            }
+
+            .time-slots {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loading */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--background-cream);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .spinner {
+            width: 2.5rem;
+            height: 2.5rem;
+            border: 3px solid var(--border-light);
+            border-top: 3px solid var(--primary-green);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Scroll to top */
+        .scroll-top {
+            position: fixed;
+            bottom: 1.25rem;
+            right: 1.25rem;
+            width: 3rem;
+            height: 3rem;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.125rem;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            box-shadow: 0 6px 20px var(--shadow-medium);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--shadow-dark);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Android specific optimizations */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.875rem;
+            }
+            
+            .hero {
+                padding: 2rem 0;
+            }
+            
+            .popup-content {
+                padding: 1.5rem;
+            }
+            
+            .time-slots {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+            
+            .time-slot {
+                padding: 1rem 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#home" class="logo">
+                    <div class="logo-icon">BA</div>
+                    Bambai Antillia
+                </a>
+                <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="tel:08976752255" class="phone-btn">Call Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Bambai Antillia</h1>
+            <p class="hero-subtitle">Premium Restobar Experience in Ulhasnagar</p>
+            
+            <div class="rating-card fade-in">
+                <div class="rating-number">4.4</div>
+                <div class="rating-info">
+                    <div class="stars">★★★★☆</div>
+                    <div class="reviews-text">254 Google Reviews</div>
+                </div>
+            </div>
+
+            <div class="food-gallery fade-in">
+                <div class="food-item">
+                    <img src="https://i.postimg.cc/1RCs8NP5/image.png" alt="Delicious Food">
+                </div>
+                <div class="food-item">
+                    <img src="https://i.postimg.cc/XqhRQd7f/image.png" alt="Signature Dish">
+                </div>
+                <div class="food-item">
+                    <img src="https://i.postimg.cc/YCNPmJgf/image.png" alt="Premium Cuisine">
+                </div>
+                <div class="food-item">
+                    <img src="https://i.postimg.cc/6QY1MnM8/image.png" alt="Gourmet Food">
+                </div>
+                <div class="food-item">
+                    <img src="https://i.postimg.cc/90q8XSC9/image.png" alt="Authentic Flavors">
+                </div>
+                <div class="food-item">
+                    <img src="https://i.postimg.cc/LsQFncKQ/image.png" alt="Culinary Excellence">
+                </div>
+            </div>
+
+            <div class="info-cards fade-in">
+                <div class="info-card">
+                    <div class="info-icon">TIME</div>
+                    <h3>Open Daily</h3>
+                    <p>1:00 PM - 1:00 AM</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">LOC</div>
+                    <h3>Location</h3>
+                    <p>Regency Antilia Club House, Mharal, Ulhasnagar</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">FOOD</div>
+                    <h3>Multi-Cuisine</h3>
+                    <p>Restaurant & Bar</p>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <button class="cta-btn order-btn" onclick="openOrderPopup()">Order Online</button>
+                <button class="cta-btn reserve-btn" onclick="openReservationPopup()">Reserve a Table</button>
+                <a href="#menu" class="cta-btn secondary">View Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Showcase -->
+    <section class="showcase" id="about">
+        <div class="container">
+            <div class="showcase-content fade-in">
+                <h2>Experience Fine Dining</h2>
+                <p>At Bambai Antillia, we bring you an exceptional dining experience that combines authentic flavors with modern culinary techniques. Our chefs craft each dish with passion and precision.</p>
+                <p>From our signature Naanizza to our wood-fired thin crust pizzas, every item tells a story of culinary excellence.</p>
+                
+                <div class="showcase-image">
+                    <img src="https://i.postimg.cc/NjrsqG3G/image.png" alt="Bambai Antillia Restaurant">
+                </div>
+                
+                <div class="cta-buttons">
+                    <button class="cta-btn order-btn" onclick="openOrderPopup()">Order Now</button>
+                    <button class="cta-btn reserve-btn" onclick="openReservationPopup()">Reserve Table</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Our Menu</h2>
+                <p class="section-subtitle">Crafted with love, served with passion</p>
+            </div>
+
+            <div class="menu-cards fade-in">
+                <div class="menu-card">
+                    <img src="https://i.postimg.cc/Y9d8x7qY/image.png" alt="Desserts Menu">
+                </div>
+                <div class="menu-card">
+                    <img src="https://i.postimg.cc/Jz3Nq8p0/image.png" alt="Small Plates Vegetarian Menu">
+                </div>
+                <div class="menu-card">
+                    <img src="https://i.postimg.cc/05JcwT1M/image.png" alt="Small Plates Non-Vegetarian Menu">
+                </div>
+                <div class="menu-card">
+                    <img src="https://i.postimg.cc/TPprXbRL/image.png" alt="Naanizza Menu">
+                </div>
+                <div class="menu-card">
+                    <img src="https://i.postimg.cc/T2rnGfX9/image.png" alt="Thin Crust Pizza Menu">
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <button class="cta-btn order-btn" onclick="openOrderPopup()">Order Online</button>
+                <button class="cta-btn reserve-btn" onclick="openReservationPopup()">Reserve Table</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Visit Us</h2>
+                <p class="section-subtitle">We're here to serve you the best dining experience</p>
+            </div>
+
+            <div class="contact-info fade-in">
+                <div class="contact-item">
+                    <div class="contact-icon">ADDR</div>
+                    <div>
+                        <strong>Address</strong>
+                        Level 1, Regency Antilia Club House,<br>
+                        Mharal, Ulhasnagar, Maharashtra 421103
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">CALL</div>
+                    <div>
+                        <strong>Phone</strong>
+                        <a href="tel:08976752255">08976752255</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">STAR</div>
+                    <div>
+                        <strong>Rating</strong>
+                        4.4 ★★★★☆ (254 Google Reviews)
+                    </div>
+                </div>
+            </div>
+
+            <div class="timings fade-in">
+                <h4>Opening Hours</h4>
+                <div class="timing-item">
+                    <span>Monday</span>
+                    <span>1:00 PM - 1:00 AM</span>
+                </div>
+                <div class="timing-item">
+                    <span>Tuesday</span>
+                    <span>1:00 PM - 1:00 AM</span>
+                </div>
+                <div class="timing-item">
+                    <span>Wednesday</span>
+                    <span>1:00 PM - 1:00 AM</span>
+                </div>
+                <div class="timing-item">
+                    <span>Thursday</span>
+                    <span>1:00 PM - 1:00 AM</span>
+                </div>
+                <div class="timing-item">
+                    <span>Friday</span>
+                    <span>1:00 PM - 1:00 AM</span>
+                </div>
+                <div class="timing-item">
+                    <span>Saturday</span>
+                    <span>1:00 PM - 1:00 AM</span>
+                </div>
+                <div class="timing-item">
+                    <span>Sunday</span>
+                    <span>1:00 PM - 1:00 AM</span>
+                </div>
+            </div>
+
+            <div class="map-container fade-in">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.234567890123!2d73.15123456789012!3d19.21234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7951234567890%3A0x1234567890abcdef!2sBambai%20Antillia%2C%20Level%201%2C%20Regency%20Antilia%20Club%20House%2C%20Mharal%2C%20Ulhasnagar%2C%20Maharashtra%20421103!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="cta-buttons">
+                <button class="cta-btn reserve-btn" onclick="openReservationPopup()">Reserve a Table</button>
+                <a href="https://maps.app.goo.gl/8k4ivVjpN1Pg3pQA9" target="_blank" class="cta-btn secondary">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bambai Antillia</h3>
+                    <p>Premium Restobar Experience in Ulhasnagar</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Phone: 08976752255</li>
+                        <li>Daily: 1 PM - 1 AM</li>
+                        <li>Rating: 4.4/5 Stars</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Google Reviews</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bambai Antillia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Popup -->
+    <div class="popup-overlay" id="orderOverlay">
+        <div class="popup">
+            <div class="popup-header">
+                <h2>Order Online</h2>
+                <p>Place your order and we'll prepare it fresh for you</p>
+                <button class="close-popup" onclick="closeOrderPopup()">&times;</button>
+            </div>
+            <div class="popup-content">
+                <!-- Step 1: Customer Details -->
+                <div class="form-step active" id="orderStep1">
+                    <h3 style="margin-bottom: 1.25rem; color: var(--text-dark); font-weight: 600;">Customer Details</h3>
+                    <div class="form-group">
+                        <label for="customerName">Full Name *</label>
+                        <input type="text" id="customerName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerPhone">Phone Number *</label>
+                        <input type="tel" id="customerPhone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Food Preference</label>
+                        <div class="toggle-group">
+                            <button class="toggle-btn active" onclick="setFoodPreference('mixed')" id="mixedBtn">Mixed</button>
+                            <button class="toggle-btn" onclick="setFoodPreference('veg')" id="vegBtn">Vegetarian Only</button>
+                            <button class="toggle-btn" onclick="setFoodPreference('nonveg')" id="nonvegBtn">Non-Veg Only</button>
+                        </div>
+                    </div>
+                    <div class="step-buttons">
+                        <button class="step-btn next" onclick="nextOrderStep()">Next: Select Items</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Menu Selection -->
+                <div class="form-step" id="orderStep2">
+                    <h3 style="margin-bottom: 1.25rem; color: var(--text-dark); font-weight: 600;">Select Items</h3>
+                    <div class="categories" id="menuCategories">
+                        <!-- Menu items will be populated here -->
+                    </div>
+                    <div class="order-summary" id="orderSummary" style="display: none;">
+                        <div class="summary-title">Order Summary</div>
+                        <div id="summaryItems"></div>
+                        <div class="summary-total">
+                            <span>Total:</span>
+                            <span id="totalAmount">₹0</span>
+                        </div>
+                    </div>
+                    <div class="step-buttons">
+                        <button class="step-btn prev" onclick="prevOrderStep()">Previous</button>
+                        <button class="step-btn next" onclick="nextOrderStep()" id="nextToAddress" disabled>Next: Address</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Address -->
+                <div class="form-step" id="orderStep3">
+                    <h3 style="margin-bottom: 1.25rem; color: var(--text-dark); font-weight: 600;">Delivery Address</h3>
+                    <div class="form-group">
+                        <label for="customerAddress">Complete Address *</label>
+                        <textarea id="customerAddress" rows="4" placeholder="Enter your complete delivery address with landmark" required></textarea>
+                    </div>
+                    <div class="order-summary">
+                        <div class="summary-title">Final Order Summary</div>
+                        <div id="finalSummaryItems"></div>
+                        <div class="summary-total">
+                            <span>Total Amount:</span>
+                            <span id="finalTotalAmount">₹0</span>
+                        </div>
+                    </div>
+                    <div class="step-buttons">
+                        <button class="step-btn prev" onclick="prevOrderStep()">Previous</button>
+                        <button class="step-btn next" onclick="placeOrder()" style="background: var(--gradient-accent);">Place Order via WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reservation Popup -->
+    <div class="popup-overlay" id="reservationOverlay">
+        <div class="popup">
+            <div class="popup-header">
+                <h2>Reserve a Table</h2>
+                <p>Book your perfect dining experience with us</p>
+                <button class="close-popup" onclick="closeReservationPopup()">&times;</button>
+            </div>
+            <div class="popup-content">
+                <div class="form-step active" id="reservationForm">
+                    <h3 style="margin-bottom: 1.25rem; color: var(--text-dark); font-weight: 600;">Reservation Details</h3>
+                    
+                    <div class="form-group">
+                        <label for="reservationName">Full Name *</label>
+                        <input type="text" id="reservationName" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reservationPhone">Phone Number *</label>
+                        <input type="tel" id="reservationPhone" placeholder="Enter your phone number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guestCount">Number of Guests *</label>
+                        <select id="guestCount" required>
+                            <option value="">Select number of guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+                            <option value="7">7 Guests</option>
+                            <option value="8">8 Guests</option>
+                            <option value="9">9 Guests</option>
+                            <option value="10">10+ Guests</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reservationDate">Preferred Date *</label>
+                        <input type="date" id="reservationDate" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Preferred Time Slot *</label>
+                        <div class="time-slots" id="timeSlots">
+                            <!-- Time slots will be populated here -->
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="specialRequests">Special Requests (Optional)</label>
+                        <textarea id="specialRequests" rows="3" placeholder="Any special requests or dietary requirements..."></textarea>
+                    </div>
+                    
+                    <div class="step-buttons">
+                        <button class="step-btn next" onclick="makeReservation()" style="background: var(--gradient-primary); width: 100%;">Reserve Table via WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">↑</button>
+
+    <script>
+        // Menu Data
+        const menuData = {
+            "Small Plates - Vegetarian": [
+                { name: "Lonavala Corn Bhajji", type: "veg", price: 155, description: "Sweet corn fritters from the hills of Lonavala" },
+                { name: "Fries Basket", type: "veg", price: 155, description: "Choice of salted, Cajun spiced or peri-peri spiced French Fries" },
+                { name: "Spicy Paneer Popcorn", type: "veg", price: 275, description: "Hot & spicy paneer tempura with our favourite thecha mayo" },
+                { name: "Cheese Garlic Bread", type: "veg", price: 275, description: "Freshly made naan bread topped with lots of cheese, seasoning and served with in house dip" },
+                { name: "Bambai Ka Chilly Paneer", type: "veg", price: 325, description: "A classic and always a loved appetizer from the Desi Chinese cuisine" },
+                { name: "Crispy Schezwan Veggies", type: "veg", price: 325, description: "Inspired from the Bombay style Chinese cuisine, spicy assorted veggies served on a hot sizzling platter" },
+                { name: "Cheese & Veggies Naan Bomb", type: "veg", price: 325, description: "Our take on the Italian calzone. Exploding cheese stuffed naan bombs with melting cheese and sautéed vegetables" },
+                { name: "Bambai Ka Signature Loaded Fries", type: "veg", price: 325, description: "Spicy aloo tuk, assortment of chutneys, molten cheese sauce, fresh tomato salsa & cilantro shoots" },
+                { name: "Classic Loaded Nachos", type: "veg", price: 325, description: "Corn tortilla chips, molten cheese sauce, sour cream, fresh tomato salsa, cilantro shoots" }
+            ],
+            "Small Plates - Non-Vegetarian": [
+                { name: "Irani Café Wali Akhuri", type: "nonveg", price: 175, description: "Crispy garlic naan, Parsi style egg bhurji topped with crispy potato straws & coriander sprigs" },
+                { name: "Desi Chicken Nuggets", type: "nonveg", price: 325, description: "Spicy chicken popcorn inspired from the local eateries of Mohammed Ali Road" },
+                { name: "Schezwan Chicken Momos", type: "nonveg", price: 275, description: "Pan fried chicken dumplings topped with homemade Schezwan sauce" },
+                { name: "Crispy Schezwan Chicken", type: "nonveg", price: 325, description: "Inspired from the Bombay style Chinese cuisine, spicy chicken bites served on a hot sizzling platter" },
+                { name: "Hot Chicken Wings", type: "nonveg", price: 325, description: "Buttermilk fried chicken wings dressed in ghost chilli sauce, cheesy mayo & house salad" },
+                { name: "Bambai Ka Chilly Chicken", type: "nonveg", price: 325, description: "Needs no description as this classic Desi Chinese appetizer is always a crowd" },
+                { name: "Chicken Lollypop", type: "nonveg", price: 325, description: "The most loved appetizer from the Desi Chinese joints, served a'la Bambai style" },
+                { name: "Cheese & Chicken Naan Bomb", type: "nonveg", price: 325, description: "Our take on the Italian calzone. Exploding cheese stuffed naan bombs with melting cheese and chef's special sautéed chicken" },
+                { name: "Malwani Fish Fry", type: "nonveg", price: 375, description: "Konkan specialty fried fish served with fiery thecha tartar sauce" },
+                { name: "Jhinga Koliwada", type: "nonveg", price: 425, description: "Spicy prawn tempura inspired from the cuisine of the fisherman's community of Mumbai" }
+            ],
+            "Naanizza - Vegetarian": [
+                { name: "Nothing But Cheese Naanizza", type: "veg", price: 375, description: "Tomato, mozzarella and cheddar cheese" },
+                { name: "Bombay Naanizza", type: "veg", price: 395, description: "Topped with mozzarella, onion, tomato, capsicum, green chillies and finished with masala mayo" },
+                { name: "Keema Mushroom Naanizza", type: "veg", price: 425, description: "Home style mushroom keema flavored with spices, veggies, cheddar and mozzarella" },
+                { name: "Tandoori Paneer Naanizza", type: "veg", price: 425, description: "Hot & spicy pizza; topped with spicy Indian gravy, mozzarella, paneer tikka, onions, capsicum, fresh green chilli, & finished with tandoori sauce, fresh coriander and chaat masala" }
+            ],
+            "Naanizza - Non-Vegetarian": [
+                { name: "Bhatti Da Murgh Naanizza", type: "nonveg", price: 425, description: "Hot & spicy pizza; topped with spicy Indian gravy, mozzarella, chicken tikka, onions, capsicum, fresh green chilli, & finished with tandoori sauce, fresh coriander and chaat masala" },
+                { name: "Shawarma Chicken Naanizza", type: "nonveg", price: 425, description: "Slow grilled chicken, green pepper, onion, tomato, pickled chillies, mozzarella, and cheddar, finished with fresh hummus and fresh parsley" },
+                { name: "Irani Keema Naanizza", type: "nonveg", price: 475, description: "Slow cooked minced mutton with aromatic spices, laccha pyaaz, cheese and fresh mint" },
+                { name: "Rara Gosht Naanizza", type: "nonveg", price: 575, description: "Mutton keema masala, tandoori chicken tikka, laccha pyaaz, cheddar, mozzarella and fresh herbs" }
+            ],
+            "Thin Crust Pizza - Vegetarian": [
+                { name: "The Queen's Special", type: "veg", price: 425, description: "Classic margarita pizza topped with pizza tomato sauce, mozzarella cheese, fresh basil & finished with olive oil" },
+                { name: "Four Cheese Pizza", type: "veg", price: 455, description: "Chef's special; mozzarella, cream cheese, cheddar & parmesan" },
+                { name: "Pizza Fungi", type: "veg", price: 455, description: "Classic mushroom and cheese pizza" },
+                { name: "BBQ Paneer Pizza", type: "veg", price: 455, description: "Smokey BBQ paneer, grilled onions, mozzarella, yellow cheddar, capsicum finished with BBQ mayo and fresh parsley" },
+                { name: "California Mexican Pizza", type: "veg", price: 475, description: "Chef's Signature pizza with mozzarella, veggies, jalapenos, nachos and topped with luscious cheese sauce" }
+            ],
+            "Thin Crust Pizza - Non-Vegetarian": [
+                { name: "The American Hot Pizza", type: "nonveg", price: 455, description: "American style spicy chicken pepperoni, mozzarella, jalapenos and finished with olive oil" },
+                { name: "BBQ Chicken Pizza", type: "nonveg", price: 475, description: "Smokey BBQ chicken, grilled onions, mozzarella, yellow cheddar, capsicum finished with BBQ mayo and fresh parsley" },
+                { name: "Garlic Chilly Prawn Pizza", type: "nonveg", price: 575, description: "Our best seller thin crust pizza with chilly garlic prawns, roasted capsicum, red chilli flakes & mozzarella cheese" }
+            ],
+            "Desserts": [
+                { name: "Bambai Ka Chocolate Cake", type: "veg", price: 240, description: "Good old gooey chocolate cake served warm with vanilla ice cream on crumble" },
+                { name: "Sizzling Hot Brownie", type: "veg", price: 240, description: "Gooey hot sizzling brownies served with a hot chocolate fudge sauce and vanilla ice cream" },
+                { name: "Red Velvet Cake", type: "veg", price: 240, description: "A bright and colorful cake with its two red layers sharply contrasted by a white cream cheese frosting" },
+                { name: "Ferrero Rocher Cake", type: "veg", price: 240, description: "Our best-selling ultimate celebration cake with moist chocolate hazelnut sponges, silky Nutella mousseline cream and Ferrero rocher" },
+                { name: "Salted Caramel Cheese Cake", type: "veg", price: 260, description: "New York baked cheese cake with luscious caramel, caramel ice cream" },
+                { name: "Bambai Ka Kulfi Falooda", type: "veg", price: 240, description: "Our signature dessert with rich kulfi, falooda, sabza seeds, rose syrup, rose petals and toasted nuts" },
+                { name: "Dry Fruit Malai Gola", type: "veg", price: 240, description: "Mumbai's iconic crushed ice dipped in sherbets of different flavours and topped with dollops of rabdi, mawa, syrups, nuts & more" },
+                { name: "Melting Chocolate Sphere", type: "veg", price: 260, description: "Mumbai's iconic crushed ice dipped in sherbets of different flavours and topped with dollops of rabdi, mawa, syrups, nuts & more" },
+                { name: "Mahabaleshwar Fruit Delight (Seasonal)", type: "veg", price: 320, description: "Our Mahabaleshwar style cream delight is loaded with layers of whipped cream, seasons best fruits (Strawberries / Mango / Sitaphal), ice cream (Strawberry / Mango / Sitaphal) and sauces. A Must try" }
+            ]
+        };
+
+        // Order state
+        let currentOrderStep = 1;
+        let foodPreference = 'mixed';
+        let selectedItems = {};
+        let customerData = {};
+        let selectedTimeSlot = '';
+
+        // Loading screen
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('loading').classList.add('hidden');
+            }, 1000);
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
+
+        // Close menu when clicking on links
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav').classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Active nav on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            const scrollTop = window.pageYOffset;
+            
+            // Scroll to top button
+            const scrollTopBtn = document.getElementById('scrollTop');
+            if (scrollTop > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+            
+            // Active nav
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll to top
+        document.getElementById('scrollTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const nav = document.getElementById('nav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!nav.contains(e.target) && !menuBtn.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+
+        // ORDER POPUP FUNCTIONS
+        function openOrderPopup() {
+            document.getElementById('orderOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            populateMenu();
+        }
+
+        function closeOrderPopup() {
+            document.getElementById('orderOverlay').classList.remove('active');
+            document.body.style.overflow = 'auto';
+            resetOrder();
+        }
+
+        function resetOrder() {
+            currentOrderStep = 1;
+            selectedItems = {};
+            customerData = {};
+            foodPreference = 'mixed';
+            
+            // Reset form
+            document.getElementById('customerName').value = '';
+            document.getElementById('customerPhone').value = '';
+            document.getElementById('customerAddress').value = '';
+            
+            // Reset steps
+            document.querySelectorAll('#orderOverlay .form-step').forEach(step => step.classList.remove('active'));
+            document.getElementById('orderStep1').classList.add('active');
+            
+            // Reset food preference
+            setFoodPreference('mixed');
+            
+            updateOrderSummary();
+        }
+
+        function setFoodPreference(preference) {
+            foodPreference = preference;
+            
+            // Update buttons
+            document.querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(preference + 'Btn').classList.add('active');
+            
+            // Repopulate menu if on step 2
+            if (currentOrderStep === 2) {
+                populateMenu();
+            }
+        }
+
+        function nextOrderStep() {
+            if (currentOrderStep === 1) {
+                // Validate customer details
+                const name = document.getElementById('customerName').value.trim();
+                const phone = document.getElementById('customerPhone').value.trim();
+                
+                if (!name || !phone) {
+                    alert('Please fill in all required fields');
+                    return;
+                }
+                
+                customerData.name = name;
+                customerData.phone = phone;
+                customerData.preference = foodPreference;
+                
+                currentOrderStep = 2;
+                showOrderStep(2);
+                populateMenu();
+            } else if (currentOrderStep === 2) {
+                // Validate items selected
+                if (Object.keys(selectedItems).length === 0) {
+                    alert('Please select at least one item');
+                    return;
+                }
+                
+                currentOrderStep = 3;
+                showOrderStep(3);
+                updateFinalSummary();
+            }
+        }
+
+        function prevOrderStep() {
+            if (currentOrderStep > 1) {
+                currentOrderStep--;
+                showOrderStep(currentOrderStep);
+            }
+        }
+
+        function showOrderStep(step) {
+            document.querySelectorAll('#orderOverlay .form-step').forEach(s => s.classList.remove('active'));
+            document.getElementById('orderStep' + step).classList.add('active');
+        }
+
+        function populateMenu() {
+            const container = document.getElementById('menuCategories');
+            container.innerHTML = '';
+            
+            Object.keys(menuData).forEach(category => {
+                const items = menuData[category].filter(item => {
+                    if (foodPreference === 'veg') return item.type === 'veg';
+                    if (foodPreference === 'nonveg') return item.type === 'nonveg';
+                    return true; // mixed
+                });
+                
+                if (items.length === 0) return;
+                
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'category';
+                
+                categoryDiv.innerHTML = `
+                    <div class="category-title">${category}</div>
+                    <div class="menu-items">
+                        ${items.map(item => `
+                            <div class="menu-item-card" data-item="${item.name}" onclick="toggleItem('${item.name}', ${item.price})">
+                                <div class="item-header">
+                                    <div class="item-name">${item.name}</div>
+                                    <div class="item-type ${item.type === 'nonveg' ? 'non-veg' : ''}">${item.type === 'veg' ? 'VEG' : 'NON-VEG'}</div>
+                                    <div class="item-price">₹${item.price}</div>
+                                </div>
+                                <div class="item-description">${item.description}</div>
+                                <div class="quantity-controls" style="display: none;">
+                                    <button class="qty-btn" onclick="event.stopPropagation(); changeQuantity('${item.name}', -1)">-</button>
+                                    <span class="qty-display">1</span>
+                                    <button class="qty-btn" onclick="event.stopPropagation(); changeQuantity('${item.name}', 1)">+</button>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                
+                container.appendChild(categoryDiv);
+            });
+        }
+
+        function toggleItem(itemName, price) {
+            const card = document.querySelector(`[data-item="${itemName}"]`);
+            const controls = card.querySelector('.quantity-controls');
+            
+            if (selectedItems[itemName]) {
+                // Remove item
+                delete selectedItems[itemName];
+                card.classList.remove('selected');
+                controls.style.display = 'none';
+            } else {
+                // Add item
+                selectedItems[itemName] = { price: price, quantity: 1 };
+                card.classList.add('selected');
+                controls.style.display = 'flex';
+                controls.querySelector('.qty-display').textContent = '1';
+            }
+            
+            updateOrderSummary();
+        }
+
+        function changeQuantity(itemName, change) {
+            if (!selectedItems[itemName]) return;
+            
+            selectedItems[itemName].quantity += change;
+            
+            if (selectedItems[itemName].quantity <= 0) {
+                delete selectedItems[itemName];
+                const card = document.querySelector(`[data-item="${itemName}"]`);
+                card.classList.remove('selected');
+                card.querySelector('.quantity-controls').style.display = 'none';
+            } else {
+                const card = document.querySelector(`[data-item="${itemName}"]`);
+                card.querySelector('.qty-display').textContent = selectedItems[itemName].quantity;
+            }
+            
+            updateOrderSummary();
+        }
+
+        function updateOrderSummary() {
+            const summaryContainer = document.getElementById('summaryItems');
+            const totalContainer = document.getElementById('totalAmount');
+            const orderSummary = document.getElementById('orderSummary');
+            const nextBtn = document.getElementById('nextToAddress');
+            
+            if (Object.keys(selectedItems).length === 0) {
+                orderSummary.style.display = 'none';
+                nextBtn.disabled = true;
+                return;
+            }
+            
+            orderSummary.style.display = 'block';
+            nextBtn.disabled = false;
+            
+            let total = 0;
+            let summaryHTML = '';
+            
+            Object.keys(selectedItems).forEach(itemName => {
+                const item = selectedItems[itemName];
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                summaryHTML += `
+                    <div class="summary-item">
+                        <span>${itemName} x ${item.quantity}</span>
+                        <span>₹${itemTotal}</span>
+                    </div>
+                `;
+            });
+            
+            summaryContainer.innerHTML = summaryHTML;
+            totalContainer.textContent = `₹${total}`;
+        }
+
+        function updateFinalSummary() {
+            const finalSummaryContainer = document.getElementById('finalSummaryItems');
+            const finalTotalContainer = document.getElementById('finalTotalAmount');
+            
+            let total = 0;
+            let summaryHTML = '';
+            
+            Object.keys(selectedItems).forEach(itemName => {
+                const item = selectedItems[itemName];
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                summaryHTML += `
+                    <div class="summary-item">
+                        <span>${itemName} x ${item.quantity}</span>
+                        <span>₹${itemTotal}</span>
+                    </div>
+                `;
+            });
+            
+            finalSummaryContainer.innerHTML = summaryHTML;
+            finalTotalContainer.textContent = `₹${total}`;
+        }
+
+        function placeOrder() {
+            // Validate address
+            const address = document.getElementById('customerAddress').value.trim();
+            if (!address) {
+                alert('Please enter your delivery address');
+                return;
+            }
+            
+            customerData.address = address;
+            
+            // Generate WhatsApp message
+            let message = `🍽️ *New Order from Bambai Antillia Website*\n\n`;
+            message += `👤 *Customer Details:*\n`;
+            message += `Name: ${customerData.name}\n`;
+            message += `Phone: ${customerData.phone}\n`;
+            message += `Food Preference: ${customerData.preference.charAt(0).toUpperCase() + customerData.preference.slice(1)}\n\n`;
+            
+            message += `📍 *Delivery Address:*\n${customerData.address}\n\n`;
+            
+            message += `🛒 *Order Details:*\n`;
+            let total = 0;
+            
+            Object.keys(selectedItems).forEach(itemName => {
+                const item = selectedItems[itemName];
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                message += `• ${itemName} x ${item.quantity} = ₹${itemTotal}\n`;
+            });
+            
+            message += `\n💰 *Total Amount: ₹${total}*\n\n`;
+            message += `⏰ *Order Time:* ${new Date().toLocaleString()}\n\n`;
+            message += `Please confirm this order and let me know the estimated delivery time. Thank you!`;
+            
+            // Encode message for WhatsApp
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/918976752255?text=${encodedMessage}`;
+            
+            // Open WhatsApp
+            window.open(whatsappURL, '_blank');
+            
+            // Close popup and reset
+            closeOrderPopup();
+            
+            // Show success message
+            setTimeout(() => {
+                alert('Order details sent to WhatsApp! We will confirm your order shortly.');
+            }, 500);
+        }
+
+        // RESERVATION POPUP FUNCTIONS
+        function openReservationPopup() {
+            document.getElementById('reservationOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Set minimum date to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('reservationDate').min = today;
+            
+            // Generate time slots
+            generateTimeSlots();
+        }
+
+        function closeReservationPopup() {
+            document.getElementById('reservationOverlay').classList.remove('active');
+            document.body.style.overflow = 'auto';
+            resetReservation();
+        }
+
+        function resetReservation() {
+            document.getElementById('reservationName').value = '';
+            document.getElementById('reservationPhone').value = '';
+            document.getElementById('guestCount').value = '';
+            document.getElementById('reservationDate').value = '';
+            document.getElementById('specialRequests').value = '';
+            selectedTimeSlot = '';
+            
+            // Reset time slots
+            document.querySelectorAll('.time-slot').forEach(slot => {
+                slot.classList.remove('active');
+            });
+        }
+
+        function generateTimeSlots() {
+            const container = document.getElementById('timeSlots');
+            container.innerHTML = '';
+            
+            // Restaurant hours: 1:00 PM to 1:00 AM (13:00 to 01:00 next day)
+            const slots = [];
+            
+            // Generate slots from 1:00 PM to 11:45 PM (same day)
+            for (let hour = 13; hour < 24; hour++) {
+                for (let minute = 0; minute < 60; minute += 15) {
+                    const time24 = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+                    const hour12 = hour > 12 ? hour - 12 : hour;
+                    const ampm = hour >= 12 ? 'PM' : 'AM';
+                    const time12 = `${hour12}:${minute.toString().padStart(2, '0')} ${ampm}`;
+                    slots.push({ time24, time12 });
+                }
+            }
+            
+            // Generate slots from 12:00 AM to 1:00 AM (next day)
+            for (let hour = 0; hour <= 1; hour++) {
+                for (let minute = 0; minute < 60; minute += 15) {
+                    if (hour === 1 && minute > 0) break; // Stop at 1:00 AM
+                    const time24 = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+                    const hour12 = hour === 0 ? 12 : hour;
+                    const ampm = 'AM';
+                    const time12 = `${hour12}:${minute.toString().padStart(2, '0')} ${ampm}`;
+                    slots.push({ time24, time12 });
+                }
+            }
+            
+            slots.forEach(slot => {
+                const slotElement = document.createElement('div');
+                slotElement.className = 'time-slot';
+                slotElement.textContent = slot.time12;
+                slotElement.onclick = () => selectTimeSlot(slot.time12, slotElement);
+                container.appendChild(slotElement);
+            });
+        }
+
+        function selectTimeSlot(time, element) {
+            // Remove active class from all slots
+            document.querySelectorAll('.time-slot').forEach(slot => {
+                slot.classList.remove('active');
+            });
+            
+            // Add active class to selected slot
+            element.classList.add('active');
+            selectedTimeSlot = time;
+        }
+
+        function makeReservation() {
+            // Validate all fields
+            const name = document.getElementById('reservationName').value.trim();
+            const phone = document.getElementById('reservationPhone').value.trim();
+            const guests = document.getElementById('guestCount').value;
+            const date = document.getElementById('reservationDate').value;
+            const specialRequests = document.getElementById('specialRequests').value.trim();
+            
+            if (!name || !phone || !guests || !date || !selectedTimeSlot) {
+                alert('Please fill in all required fields and select a time slot');
+                return;
+            }
+            
+            // Format date
+            const dateObj = new Date(date);
+            const formattedDate = dateObj.toLocaleDateString('en-IN', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            // Generate WhatsApp message
+            let message = `🍽️ *Table Reservation Request - Bambai Antillia*\n\n`;
+            message += `👤 *Customer Details:*\n`;
+            message += `Name: ${name}\n`;
+            message += `Phone: ${phone}\n`;
+            message += `Number of Guests: ${guests}\n\n`;
+            
+            message += `📅 *Reservation Details:*\n`;
+            message += `Date: ${formattedDate}\n`;
+            message += `Time: ${selectedTimeSlot}\n\n`;
+            
+            if (specialRequests) {
+                message += `📝 *Special Requests:*\n${specialRequests}\n\n`;
+            }
+            
+            message += `⏰ *Request Time:* ${new Date().toLocaleString()}\n\n`;
+            message += `Please confirm this table reservation. Looking forward to dining at Bambai Antillia!`;
+            
+            // Encode message for WhatsApp
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/918976752255?text=${encodedMessage}`;
+            
+            // Open WhatsApp
+            window.open(whatsappURL, '_blank');
+            
+            // Close popup and reset
+            closeReservationPopup();
+            
+            // Show success message
+            setTimeout(() => {
+                alert('Reservation request sent to WhatsApp! We will confirm your table booking shortly.');
+            }, 500);
+        }
+
+        // Close popups when clicking outside
+        document.getElementById('orderOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeOrderPopup();
+            }
+        });
+
+        document.getElementById('reservationOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeReservationPopup();
+            }
+        });
+
+        // Prevent popup close when clicking inside
+        document.querySelectorAll('.popup').forEach(popup => {
+            popup.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+    </script>
+</body>
+</html>
